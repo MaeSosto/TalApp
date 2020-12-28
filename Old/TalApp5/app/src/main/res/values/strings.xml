@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">TalApp</string>
+
+    <string name="accedi">Accedi</string>
+    <string name="iscriviti">Iscriviti</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="password_dimenticata_label1">Non ricordi la password?</string>
+    <string name="registrati">Registrati</string>
+    <string name="hint_nome">Nome</string>
+    <string name="hint_ripeti_password">Ripeti password</string>
+    <string name="password_dimenticata">Password dimenticata</string>
+    <string name="password_dimenticata_label2">Ti manderemo una mail per reimpostare la password</string>
+    <string name="invia_mail">Invia mail</string>
+    <string name="home">Home</string>
+    <string name="calendario">Calendario</string>
+    <string name="trasfusioni">Trasfusioni</string>
+    <string name="esami">Esami</string>
+    <string name="terapie">Terapie</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="oppure">Oppure</string>
+    <string name="title_activity_impostazioni">ImpostazioniActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="impostazioni_switch1">Notifica trasfusioni future</string>
+    <string name="impostazioni_label1">Alle ore</string>
+    <string name="impostazioni_switch2">Notifica esami strumentali futuri</string>
+    <string name="impostazioni_switch3">Notifica gli esami di laboratorio futuri</string>
+    <string name="disconnetti">Disconnetti</string>
+    <string name="impostazioni">Impostazioni</string>
+</resources>

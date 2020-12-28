@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_home"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.talapp.Home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_calendarioFragment"
+            app:destination="@id/calendarioFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_trasfusioniFragment"
+            app:destination="@id/trasfusioniFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_esamiFragment"
+            app:destination="@id/esamiFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_terapieFragment"
+            app:destination="@id/terapieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calendarioFragment"
+        android:name="com.example.talapp.Home.CalendarioFragment"
+        android:label="@string/calendario"
+        tools:layout="@layout/fragment_calendario" >
+        <action
+            android:id="@+id/action_calendarioFragment_to_aggiungiTrasfusioneFragment"
+            app:destination="@id/aggiungiTrasfusioneFragment" />
+        <action
+            android:id="@+id/action_calendarioFragment_to_aggiungiEsamiFragment"
+            app:destination="@id/aggiungiEsamiFragment" />
+        <action
+            android:id="@+id/action_calendarioFragment_to_aggiungiTerapieFragment"
+            app:destination="@id/aggiungiTerapieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trasfusioniFragment"
+        android:name="com.example.talapp.Trasfusioni.TrasfusioniFragment"
+        android:label="@string/trasfusioni"
+        tools:layout="@layout/fragment_trasfusioni" />
+    <fragment
+        android:id="@+id/esamiFragment"
+        android:name="com.example.talapp.Esami.EsamiFragment"
+        android:label="@string/esami"
+        tools:layout="@layout/fragment_esami" />
+    <fragment
+        android:id="@+id/terapieFragment"
+        android:name="com.example.talapp.Terapie.TerapieFragment"
+        android:label="@string/terapie"
+        tools:layout="@layout/fragment_terapie" />
+    <fragment
+        android:id="@+id/aggiungiTrasfusioneFragment"
+        android:name="com.example.talapp.Trasfusioni.AggiungiTrasfusioneFragment"
+        android:label="fragment_aggiungi_trasfusione"
+        tools:layout="@layout/fragment_aggiungi_trasfusione" />
+    <fragment
+        android:id="@+id/aggiungiEsamiFragment"
+        android:name="com.example.talapp.Esami.AggiungiEsamiFragment"
+        android:label="fragment_aggiungi_esami"
+        tools:layout="@layout/fragment_aggiungi_esami" />
+    <fragment
+        android:id="@+id/aggiungiTerapieFragment"
+        android:name="com.example.talapp.Terapie.AggiungiTerapieFragment"
+        android:label="fragment_aggiungi_terapie"
+        tools:layout="@layout/fragment_aggiungi_terapie" />
+</navigation>

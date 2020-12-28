@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/launcherFragment">
+
+    <fragment
+        android:id="@+id/launcherFragment"
+        android:name="com.example.talapp.Launcher.LauncherFragment"
+        android:label="fragment_launcher"
+        tools:layout="@layout/fragment_launcher" >
+        <action
+            android:id="@+id/action_launcherFragment_to_accediFragment"
+            app:destination="@id/accediFragment" />
+        <action
+            android:id="@+id/action_launcherFragment_to_registratiFragment"
+            app:destination="@id/registratiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accediFragment"
+        android:name="com.example.talapp.Launcher.AccediFragment"
+        android:label="fragment_accedi"
+        tools:layout="@layout/fragment_accedi" >
+        <action
+            android:id="@+id/action_accediFragment_to_passwordDimenticataFragment"
+            app:destination="@id/passwordDimenticataFragment" />
+        <action
+            android:id="@+id/action_accediFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/registratiFragment"
+        android:name="com.example.talapp.Launcher.RegistratiFragment"
+        android:label="fragment_registrati"
+        tools:layout="@layout/fragment_registrati" >
+        <action
+            android:id="@+id/action_registratiFragment_to_homeActivity"
+            app:destination="@id/homeActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/passwordDimenticataFragment"
+        android:name="com.example.talapp.Launcher.PasswordDimenticataFragment"
+        android:label="fragment_password_dimenticata"
+        tools:layout="@layout/fragment_password_dimenticata" />
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.talapp.Home.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home" />
+    <activity
+        android:id="@+id/calendarioActivity"
+        android:name="com.example.talapp.Calendario.CalendarioActivity"
+        android:label="activity_calendario"
+        tools:layout="@layout/activity_calendario" />
+</navigation>

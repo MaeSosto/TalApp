@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="title">36sp</dimen>
+    <dimen name="home_padding_vertical">60dp</dimen>
+    <dimen name="home_card_height">170dp</dimen>
+    <dimen name="CalendarHeight">400dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="fragment_horizontal_margin">16dp</dimen>
+    <dimen name="fragment_vertical_margin">16dp</dimen>
+</resources>

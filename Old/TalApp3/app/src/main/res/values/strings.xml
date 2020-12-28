@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">TalApp</string>
+
+    <string name="accedi">Accedi</string>
+    <string name="iscriviti">Iscriviti</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="password_dimenticata_label1">Non ricordi la password?</string>
+    <string name="registrati">Registrati</string>
+    <string name="hint_nome">Nome</string>
+    <string name="hint_ripeti_password">Ripeti password</string>
+    <string name="password_dimenticata">Password dimenticata</string>
+    <string name="password_dimenticata_label2">Ti manderemo una mail per reimpostare la password</string>
+    <string name="invia_mail">Invia mail</string>
+    <string name="home">Home</string>
+    <string name="calendario">Calendario</string>
+    <string name="trasfusioni">Trasfusioni</string>
+    <string name="esami">Esami</string>
+    <string name="terapie">Terapie</string>
+</resources>

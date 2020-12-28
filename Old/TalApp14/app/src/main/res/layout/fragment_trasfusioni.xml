@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/scrollview_padding"
+    tools:context=".Trasfusioni.TrasfusioniFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/scrollview_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Ultima \n trasfusione"
+                android:textSize="@dimen/text_normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Prossima \n trasfusione"
+                android:textSize="@dimen/text_normal" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:max="100"
+            android:progress="45" />
+
+        <TextView
+            android:id="@+id/ETProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/MarginVertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="@dimen/text_normal" />
+
+        <Button
+            android:id="@+id/buttonAggiungiUltimaTrasfusione"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/fragment_horizontal_margin"
+            android:layout_marginVertical="@dimen/MarginVertical"
+            android:layout_marginBottom="5dp"
+            android:text="@string/aggiungi_dati_ultima_trasfusione"
+            app:icon="@drawable/ic_baseline_add_24" />
+
+        <Button
+            android:id="@+id/buttonCronologiatrasfusioni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/fragment_horizontal_margin"
+            android:layout_marginVertical="@dimen/MarginVertical"
+            android:layout_marginBottom="4dp"
+            android:text="@string/visualizza_cronologia"
+            app:icon="@drawable/ic_baseline_history_24" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/LineChart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

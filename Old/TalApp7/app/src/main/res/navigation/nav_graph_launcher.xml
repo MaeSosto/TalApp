@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph_launcher">
+
+    <navigation
+        android:id="@+id/navigation"
+        app:startDestination="@id/registratiFragment">
+        <fragment
+            android:id="@+id/registratiFragment"
+            android:name="com.example.talapp.Launcher.RegistratiFragment"
+            tools:layout="@layout/fragment_registrati"
+            android:label="fragment_registrati" />
+        <fragment
+            android:id="@+id/launcherFragment"
+            android:name="com.example.talapp.Launcher.LauncherFragment"
+            tools:layout="@layout/fragment_launcher"
+            android:label="fragment_launcher">
+            <action
+                android:id="@+id/action_launcherFragment_to_accediFragment"
+                app:destination="@id/accediFragment" />
+            <action
+                android:id="@+id/action_launcherFragment_to_registratiFragment"
+                app:destination="@id/registratiFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/accediFragment"
+            android:name="com.example.talapp.Launcher.AccediFragment"
+            tools:layout="@layout/fragment_accedi"
+            android:label="fragment_accedi">
+            <action
+                android:id="@+id/action_accediFragment_to_passwordDimenticataFragment"
+                app:destination="@id/passwordDimenticataFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/passwordDimenticataFragment"
+            android:name="com.example.talapp.Launcher.PasswordDimenticataFragment"
+            tools:layout="@layout/fragment_password_dimenticata"
+            android:label="fragment_password_dimenticata" />
+    </navigation>
+</navigation>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "144265261241",
+    "project_id": "talapp-24958",
+    "storage_bucket": "talapp-24958.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144265261241:android:5bc8a26003781de6282b68",
+        "android_client_info": {
+          "package_name": "com.example.talapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144265261241-kn15jdkhq87h97gkgpcm71aa7b5br6a8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.talapp",
+            "certificate_hash": "22ba5d99b2be3f9cd0725da4048a5d6a505c026a"
+          }
+        },
+        {
+          "client_id": "144265261241-vr9b7pvughdukhdbcubn5ru9c3heu0oe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQUY9AHHOVOg4nZhkA54aAat2C6_DbDHY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144265261241-vr9b7pvughdukhdbcubn5ru9c3heu0oe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

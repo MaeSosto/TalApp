@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/launcherFragment">
+
+    <navigation android:id="@+id/navigation_launcher"
+        app:startDestination="@id/launcherFragment">
+        <navigation android:id="@+id/navigation"
+            app:startDestination="@id/registratiFragment">
+            <fragment
+                android:id="@+id/registratiFragment"
+                android:name="com.example.talapp.Launcher.RegistratiFragment"
+                android:label="fragment_registrati"
+                tools:layout="@layout/fragment_registrati" />
+            <fragment
+                android:id="@+id/launcherFragment"
+                android:name="com.example.talapp.Launcher.LauncherFragment"
+                android:label="fragment_launcher"
+                tools:layout="@layout/fragment_launcher">
+                <action
+                    android:id="@+id/action_launcherFragment_to_accediFragment"
+                    app:destination="@id/accediFragment" />
+                <action
+                    android:id="@+id/action_launcherFragment_to_registratiFragment"
+                    app:destination="@id/registratiFragment" />
+            </fragment>
+            <fragment
+                android:id="@+id/accediFragment"
+                android:name="com.example.talapp.Launcher.AccediFragment"
+                android:label="fragment_accedi"
+                tools:layout="@layout/fragment_accedi">
+                <action
+                    android:id="@+id/action_accediFragment_to_passwordDimenticataFragment"
+                    app:destination="@id/passwordDimenticataFragment" />
+            </fragment>
+            <fragment
+                android:id="@+id/passwordDimenticataFragment"
+                android:name="com.example.talapp.Launcher.PasswordDimenticataFragment"
+                android:label="fragment_password_dimenticata"
+                tools:layout="@layout/fragment_password_dimenticata" />
+        </navigation>
+    </navigation>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.talapp.Home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_calendarioFragment"
+            app:destination="@id/calendarioFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_trasfusioniFragment"
+            app:destination="@id/trasfusioniFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_esamiFragment"
+            app:destination="@id/esamiFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_terapieFragment"
+            app:destination="@id/terapieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calendarioFragment"
+        android:name="com.example.talapp.Calendario.CalendarioFragment"
+        android:label="fragment_calendario"
+        tools:layout="@layout/fragment_calendario" >
+        <action
+            android:id="@+id/action_calendarioFragment_to_aggiungiEsamiFragment"
+            app:destination="@id/aggiungiEsamiFragment" />
+        <action
+            android:id="@+id/action_calendarioFragment_to_aggiungiTrasfusioneFragment"
+            app:destination="@id/aggiungiTrasfusioneFragment" />
+        <action
+            android:id="@+id/action_calendarioFragment_to_aggiungiTerapieFragment"
+            app:destination="@id/aggiungiTerapieFragment" />
+        <action
+            android:id="@+id/action_calendarioFragment_to_giornoFragment"
+            app:destination="@id/giornoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aggiungiEsamiFragment"
+        android:name="com.example.talapp.Esami.AggiungiEsamiFragment"
+        android:label="fragment_aggiungi_esami"
+        tools:layout="@layout/fragment_aggiungi_esami" />
+    <fragment
+        android:id="@+id/aggiungiTrasfusioneFragment"
+        android:name="com.example.talapp.Trasfusioni.AggiungiTrasfusioneFragment"
+        android:label="fragment_aggiungi_trasfusione"
+        tools:layout="@layout/fragment_aggiungi_trasfusione" />
+    <fragment
+        android:id="@+id/aggiungiTerapieFragment"
+        android:name="com.example.talapp.Terapie.AggiungiTerapieFragment"
+        android:label="fragment_aggiungi_terapie"
+        tools:layout="@layout/fragment_aggiungi_terapie" />
+    <fragment
+        android:id="@+id/trasfusioniFragment"
+        android:name="com.example.talapp.Trasfusioni.TrasfusioniFragment"
+        android:label="fragment_trasfusioni"
+        tools:layout="@layout/fragment_trasfusioni" >
+        <action
+            android:id="@+id/action_trasfusioniFragment_to_cronologiaTrasfusioneFragment"
+            app:destination="@id/cronologiaTrasfusioneFragment" />
+        <action
+            android:id="@+id/action_trasfusioniFragment_to_modificaTrasfusioneFragment"
+            app:destination="@id/modificaTrasfusioneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/esamiFragment"
+        android:name="com.example.talapp.Esami.EsamiFragment"
+        android:label="fragment_esami"
+        tools:layout="@layout/fragment_esami" >
+        <action
+            android:id="@+id/action_esamiFragment_to_cronologiaEsamiFragment"
+            app:destination="@id/cronologiaEsamiFragment" />
+        <action
+            android:id="@+id/action_esamiFragment_to_modificaEsamiFragment"
+            app:destination="@id/modificaEsamiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/terapieFragment"
+        android:name="com.example.talapp.Terapie.TerapieFragment"
+        android:label="fragment_terapie"
+        tools:layout="@layout/fragment_terapie" >
+        <action
+            android:id="@+id/action_terapieFragment_to_cronologiaTerapieFragment"
+            app:destination="@id/cronologiaTerapieFragment" />
+        <action
+            android:id="@+id/action_terapieFragment_to_modificaTerapieFragment"
+            app:destination="@id/modificaTerapieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cronologiaTrasfusioneFragment"
+        android:name="com.example.talapp.Trasfusioni.CronologiaTrasfusioneFragment"
+        android:label="fragment_cronologia_trasfusione"
+        tools:layout="@layout/fragment_cronologia_trasfusioni" />
+    <fragment
+        android:id="@+id/modificaTrasfusioneFragment"
+        android:name="com.example.talapp.Trasfusioni.ModificaTrasfusioneFragment"
+        android:label="fragment_modifica_trasfusione"
+        tools:layout="@layout/fragment_modifica_trasfusione" />
+    <fragment
+        android:id="@+id/cronologiaEsamiFragment"
+        android:name="com.example.talapp.Esami.CronologiaEsamiFragment"
+        android:label="fragment_cronologia_esami"
+        tools:layout="@layout/fragment_cronologia_esami" />
+    <fragment
+        android:id="@+id/cronologiaTerapieFragment"
+        android:name="com.example.talapp.Terapie.CronologiaTerapieFragment"
+        android:label="fragment_cronologia_terapie"
+        tools:layout="@layout/fragment_cronologia_terapie" />
+    <fragment
+        android:id="@+id/modificaEsamiFragment"
+        android:name="com.example.talapp.Esami.ModificaEsamiFragment"
+        android:label="fragment_modifica_esami"
+        tools:layout="@layout/fragment_modifica_esami" />
+    <fragment
+        android:id="@+id/modificaTerapieFragment"
+        android:name="com.example.talapp.Terapie.ModificaTerapieFragment"
+        android:label="fragment_modifica_terapie"
+        tools:layout="@layout/fragment_modifica_terapie" />
+    <fragment
+        android:id="@+id/giornoFragment"
+        android:name="com.example.talapp.Calendario.GiornoFragment"
+        android:label="fragment_giorno"
+        tools:layout="@layout/fragment_giorno" />
+</navigation>
