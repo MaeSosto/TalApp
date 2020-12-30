@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Esami.AggiungiEsamiFragment" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/data"
+                android:textSize="@dimen/text_normal" />
+
+            <EditText
+                android:id="@+id/editTextDateTrasfusione"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="date" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/ora"
+                android:textSize="@dimen/text_normal" />
+
+            <EditText
+                android:id="@+id/editTextTimeTrasfusione"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="time" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/periodicit"
+                android:textSize="@dimen/text_normal" />
+
+            <Spinner
+                android:id="@+id/spinnerUnitaTrasfusione"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:entries="@array/periodicita"
+                android:gravity="center"
+                android:textAlignment="center" />/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/tipo_di_esame"
+                android:textSize="@dimen/text_normal" />
+
+            <Spinner
+                android:id="@+id/spinnerTipoEsame"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:entries="@array/TipoEsame"
+                android:gravity="center"
+                android:textAlignment="center" />/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/nome_esame"
+                android:textSize="@dimen/text_normal" />
+
+            <EditText
+                android:id="@+id/editTextNomeEsame"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textAutoComplete|textAutoCorrect" />
+
+        </LinearLayout>
+
+        <Switch
+            android:id="@+id/switchTerapiaPeriodica"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginVertical="@dimen/MarginVertical"
+            android:gravity="center_vertical"
+            android:text="@string/digiuno"
+            android:textSize="@dimen/text_normal" />
+
+        <Switch
+            android:id="@+id/switchAttivazione24h"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginVertical="@dimen/MarginVertical"
+            android:gravity="center_vertical"
+            android:text="@string/attivazione_24h_prima"
+            android:textSize="@dimen/text_normal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="@dimen/MarginVertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/ricordami_di"
+            android:textSize="@dimen/text_normal" />
+
+        <EditText
+            android:id="@+id/editTextRicorda"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/MarginVertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/ulteriori_informazioni"
+            android:textSize="@dimen/text_normal" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="textLongMessage" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonSalvaEsame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/MarginVertical"
+        android:layout_marginTop="8dp"
+
+        android:text="@string/salva"
+        android:textSize="@dimen/text_normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+</androidx.constraintlayout.widget.ConstraintLayout>
