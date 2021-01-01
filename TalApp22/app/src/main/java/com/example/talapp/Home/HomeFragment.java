@@ -1,5 +1,6 @@
 package com.example.talapp.Home;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -30,6 +31,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static android.content.ContentValues.TAG;
+import static com.example.talapp.HomeActivity.actionBar;
 
 
 public class HomeFragment extends Fragment {
@@ -39,6 +41,9 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_home, container, false);
+
+        //actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.Tumbleweed)));
+
 
         root.findViewById(R.id.CVCalendario).setOnClickListener(new View.OnClickListener() {
             @Override

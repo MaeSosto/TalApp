@@ -1,5 +1,6 @@
 package com.example.talapp.Trasfusioni;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -27,6 +28,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.example.talapp.HomeActivity.actionBar;
 import static com.example.talapp.HomeActivity.trasfusioniRef;
 import static com.example.talapp.Utils.Util.KEY_TRASFUSIONE_DATA;
 import static com.example.talapp.Utils.Util.KEY_TRASFUSIONE_NOTE;
@@ -37,15 +39,15 @@ import static com.example.talapp.Utils.Util.trasfusioniViewModel;
 
 public class AggiungiTrasfusioneFragment extends Fragment {
 
-    private EditText ETDate, ETTime, ETNote;
-    private String Error = "";
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_aggiungi_trasfusione, container, false);
 
-        ETDate = root.findViewById(R.id.editTextDateTrasfusione);
+        actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.TerraCotta)));
+
+
+        EditText ETDate = root.findViewById(R.id.editTextDateTrasfusione);
         ETDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,7 +56,7 @@ public class AggiungiTrasfusioneFragment extends Fragment {
             }
         });
 
-        ETTime = root.findViewById(R.id.editTextHbTrasfusione);
+        EditText ETTime = root.findViewById(R.id.editTextHbTrasfusione);
         ETTime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,14 +65,17 @@ public class AggiungiTrasfusioneFragment extends Fragment {
             }
         });
 
-        ETNote = root.findViewById(R.id.editTextNoteTrasfusione);
+        EditText ETNote = root.findViewById(R.id.editTextNoteTrasfusione);
         Spinner Sunita = root.findViewById(R.id.spinnerUnitaTrasfusione);
 
         root.findViewById(R.id.buttonSalvaTrasfusione).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!check()){
-                    Toast.makeText(getContext(), Error, Toast.LENGTH_LONG);
+                if(ETDate.getText().toString().isEmpty()){
+                    Toast.makeText(getContext(), "Inserisci una data valida", Toast.LENGTH_SHORT).show();
+                }
+                if(ETTime.getText().toString().isEmpty()){
+                    Toast.makeText(getContext(), "Inserisci un orario valido", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     Calendar date = Calendar.getInstance();
@@ -80,49 +85,10 @@ public class AggiungiTrasfusioneFragment extends Fragment {
                         e.printStackTrace();
                     }
 
-                    if(isConnectedToInternet(getContext())){
-                        Map<String, Object> trasfusione = new HashMap<>();
-                        trasfusione.put(KEY_TRASFUSIONE_DATA, Util.DateToLong(date.getTime()));
-                        trasfusione.put(KEY_TRASFUSIONE_UNITA, Sunita.getSelectedItem().toString());
-                        if(!ETNote.getText().toString().isEmpty()) {
-                            trasfusione.put(KEY_TRASFUSIONE_NOTE, ETNote.getText().toString());
-                        }
-
-                        trasfusioniRef.add(trasfusione)
-                                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                                    @Override
-                                    public void onSuccess(DocumentReference documentReference) {
-                                        Log.i("Trasfusione", "Aggiunta");
-                                        Toast.makeText(getContext(), "Trasfusione aggiunta", Toast.LENGTH_LONG).show();
-                                        Navigation.findNavController(root).popBackStack();
-                                    }
-                                })
-                                .addOnFailureListener(new OnFailureListener() {
-                                    @Override
-                                    public void onFailure(@NonNull Exception e) {
-                                        Log.i("Trasfusione", "Errore");
-                                        Toast.makeText(getContext(), "Errore di aggiunta", Toast.LENGTH_LONG).show();
-                                    }
-                                });
-                    }
-                    else{
-                        Toast.makeText(getContext(), "Errore di connessione", Toast.LENGTH_LONG).show();
-                    }
+                    trasfusioniViewModel.InsertTrasfusione(root, Sunita, date, ETNote);
                 }
             }
         });
         return root;
-    }
-
-    private boolean check(){
-        if (ETDate.getText().toString().isEmpty()){
-            Error = "Inserisci una data valida";
-            return false;
-        }
-        if(ETTime.getText().toString().isEmpty()){
-            Error = "Inserisci un'orario valida";
-            return false;
-        }
-        return true;
     }
 }

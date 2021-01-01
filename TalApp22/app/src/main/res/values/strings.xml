@@ -90,5 +90,6 @@
     <string name="modifica_esami">Modifica esami</string>
     <string name="cronologia_terapie">Cronologia terapie</string>
     <string name="modifica_terapie">Modifica terapie</string>
+    <string name="eventi_del_giorno">Eventi del giorno</string>
 
 </resources>

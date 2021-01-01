@@ -1,5 +1,6 @@
 package com.example.talapp;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.Navigation;
@@ -8,7 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import com.example.talapp.Database.TrasfusioniViewModel;
+import com.example.talapp.Trasfusioni.TrasfusioniViewModel;
 import com.example.talapp.Impostazioni.ImpostazioniActivity;
 import com.google.firebase.firestore.CollectionReference;
 
@@ -17,7 +18,7 @@ import static com.example.talapp.Utils.Util.*;
 public class HomeActivity extends AppCompatActivity {
 
     public final static CollectionReference trasfusioniRef = db.collection(KEY_UTENTI).document(Utente).collection(KEY_TRASFUSIONE);
-
+    public static ActionBar actionBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +27,8 @@ public class HomeActivity extends AppCompatActivity {
         trasfusioniViewModel = ViewModelProviders.of(this).get(TrasfusioniViewModel.class);
         navController = Navigation.findNavController(this, R.id.nav_host_fragment_container2);
         NavigationUI.setupActionBarWithNavController(this, navController);
+
+        actionBar = getSupportActionBar();
     }
 
     @Override

@@ -36,6 +36,15 @@
         <action
             android:id="@+id/action_calendarioFragment_to_aggiungiTerapieFragment"
             app:destination="@id/aggiungiTerapieFragment" />
+        <action
+            android:id="@+id/actionGiorno"
+            app:destination="@id/giornoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/giornoFragment"
+        android:name="com.example.talapp.Home.GiornoFragment"
+        android:label="@string/eventi_del_giorno"
+        tools:layout="@layout/fragment_giorno">
     </fragment>
     <fragment
         android:id="@+id/trasfusioniFragment"

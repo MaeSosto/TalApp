@@ -60,7 +60,11 @@ public class AccediFragment extends Fragment {
             public void onClick(View view) {
                 EditText ETemail = root.findViewById(R.id.editTextTextEmailAddress_forgot);
                 EditText ETPassword = root.findViewById(R.id.editTextTextPassword);
-                logIn(ETemail.getText().toString(), ETPassword.getText().toString());
+                if (ETemail.getText().toString().isEmpty() || ETPassword.getText().toString().isEmpty()) {
+                    Toast.makeText(getContext(), "Inserici delle credenziali valide", Toast.LENGTH_SHORT).show();
+                } else {
+                    logIn(ETemail.getText().toString(), ETPassword.getText().toString());
+                }
             }
         });
 

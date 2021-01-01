@@ -9,22 +9,18 @@ import android.util.Patterns;
 
 import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
-import androidx.room.TypeConverter;
 
-import com.example.talapp.Database.TrasfusioniViewModel;
+import com.example.talapp.Trasfusioni.TrasfusioniViewModel;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 

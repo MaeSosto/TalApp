@@ -1,42 +1,55 @@
 package com.example.talapp.Home;
 
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.talapp.Database.TrasfusioniViewModel;
+import com.applandeo.materialcalendarview.CalendarView;
 import com.example.talapp.R;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
-import com.google.firebase.firestore.QuerySnapshot;
 
-import static android.content.ContentValues.TAG;
+import java.util.Calendar;
+
+import static com.example.talapp.HomeActivity.actionBar;
+import static com.example.talapp.Utils.Util.DateToLong;
 import static com.example.talapp.Utils.Util.trasfusioniViewModel;
 
 
 public class CalendarioFragment extends Fragment {
 
     private boolean FAB = false;
-    private final String KEY_TRASFUSIONE_UNITA = "unita";
-    private final String KEY_TRASFUSIONE_DATA = "data";
+    private CalendarView calendarView;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_calendario, container, false);
 
-        //trasfusioniViewModel.getTrasfusioni();
-        //Task<QuerySnapshot> task = trasfusioniViewModel.getTrasfusioni();
-        //for (QueryDocumentSnapshot document : task.getResult()) {
-        //    Log.d(TAG, "Data: " + document.get(KEY_TRASFUSIONE_DATA) + " Unita " + document.get(KEY_TRASFUSIONE_UNITA));
-        //}
+        actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.DeepChampagne)));
 
+        //Calendario
+        calendarView = root.findViewById(R.id.calendarView);
+        updateList();
+
+        //SFOGLIO IL CALENDARIO IN AVANTI
+        calendarView.setOnForwardPageChangeListener(this::updateList);
+
+        //SFOGLIO IL CALENDARIO IN INDIETRO
+        calendarView.setOnPreviousPageChangeListener(this::updateList);
+
+        //QUANDO CLICCHI SU UN GIORNO
+        calendarView.setOnDayClickListener(eventDay -> {
+            Calendar clickedDayCalendar = eventDay.getCalendar();
+            Bundle bundle = new Bundle();
+            bundle.putLong("LongGiorno", DateToLong(clickedDayCalendar.getTime()));
+            Navigation.findNavController(root).navigate(R.id.actionGiorno, bundle);
+        });
 
         openCloseFAB(root);
         root.findViewById(R.id.floatingActionButton).setOnClickListener(new View.OnClickListener() {
@@ -68,6 +81,15 @@ public class CalendarioFragment extends Fragment {
         });
 
         return  root;
+    }
+
+    private void updateList() {
+        Calendar Cmese = calendarView.getCurrentPageDate();
+        int ultimo = Cmese.getActualMaximum(Calendar.DAY_OF_MONTH);
+        Calendar Fmese = calendarView.getCurrentPageDate();
+        Fmese.set(Calendar.DAY_OF_MONTH, ultimo);
+
+        trasfusioniViewModel.setCalendarioTrasfusioni(Cmese, Fmese, calendarView);
     }
 
     private void openCloseFAB(View root){

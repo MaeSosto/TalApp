@@ -104,7 +104,7 @@ public class TrasfusioniListAdapter extends RecyclerView.Adapter<TrasfusioniList
                    String id = mQuerySnapshot.get(mPosition).getId();
                    Bundle bundle = new Bundle();
                    bundle.putString("TrasfusioneID", id);
-                    Navigation.findNavController(v).navigate(R.id.actionModificaTrasfusione, bundle);
+                   Navigation.findNavController(v).navigate(R.id.actionModificaTrasfusione, bundle);
                }
            });
         }

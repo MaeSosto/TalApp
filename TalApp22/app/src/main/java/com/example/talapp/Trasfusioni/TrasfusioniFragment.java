@@ -1,5 +1,6 @@
 package com.example.talapp.Trasfusioni;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,8 @@ import androidx.navigation.Navigation;
 
 import com.example.talapp.R;
 
+import static com.example.talapp.HomeActivity.actionBar;
+
 
 public class TrasfusioniFragment extends Fragment {
 
@@ -19,6 +22,8 @@ public class TrasfusioniFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_trasfusioni, container, false);
+
+        actionBar.setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.TerraCotta)));
 
         root.findViewById(R.id.buttonAggiungiUltimaTrasfusione).setOnClickListener(new View.OnClickListener() {
             @Override
