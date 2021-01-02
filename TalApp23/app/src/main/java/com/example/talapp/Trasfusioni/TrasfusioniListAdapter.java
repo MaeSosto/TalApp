@@ -6,7 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -15,11 +15,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.talapp.R;
 import com.example.talapp.Utils.Util;
+import com.google.firebase.Timestamp;
 import com.google.firebase.firestore.DocumentSnapshot;
 
 import java.util.List;
 import java.util.Map;
 
+import static com.example.talapp.Utils.Util.DateToOrario;
 import static com.example.talapp.Utils.Util.KEY_TRASFUSIONE_DATA;
 import static com.example.talapp.Utils.Util.KEY_TRASFUSIONE_HB;
 import static com.example.talapp.Utils.Util.KEY_TRASFUSIONE_NOTE;
@@ -68,18 +70,19 @@ public class TrasfusioniListAdapter extends RecyclerView.Adapter<TrasfusioniList
     public class TrasfusioniViewHolder extends RecyclerView.ViewHolder {
 
         private int mPosition;
-        private  ImageView IMGEdit;
+        private Button Edit;
 
         public TrasfusioniViewHolder(@NonNull View itemView) {
             super(itemView);
-            IMGEdit = itemView.findViewById(R.id.IMGEdit);
+            Edit = itemView.findViewById(R.id.buttonEditTrasfusione);
         }
 
 
         public void setData(DocumentSnapshot documentSnapshot, int position) {
             Map<String, Object> trasfusione = documentSnapshot.getData();
             TextView TXVgiorno = itemView.findViewById(R.id.TXVGiornoTrasfusione);
-            TXVgiorno.setText("Trasfusione del "+ Util.DateToString(Util.LongToDate((Long) trasfusione.get(KEY_TRASFUSIONE_DATA))) + " ore "+ Util.LongToDate((Long) trasfusione.get(KEY_TRASFUSIONE_DATA)).getHours()+ ":"+ Util.LongToDate((Long) trasfusione.get(KEY_TRASFUSIONE_DATA)).getMinutes());
+            Timestamp tmp = (Timestamp) trasfusione.get(KEY_TRASFUSIONE_DATA);
+            TXVgiorno.setText("Trasfusione del "+ Util.DateToString(tmp.toDate()) + " ore "+ DateToOrario(tmp.toDate()));
             TextView unita = itemView.findViewById(R.id.TXVUnitaTrasfusione);
             unita.setText("Unità: " + trasfusione.get(KEY_TRASFUSIONE_UNITA));
             TextView hb = itemView.findViewById(R.id.TXVHbTrasfusione);
@@ -98,13 +101,13 @@ public class TrasfusioniListAdapter extends RecyclerView.Adapter<TrasfusioniList
         }
 
         public void setListeners() {
-           IMGEdit.setOnClickListener(new View.OnClickListener() {
+           Edit.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
                    String id = mQuerySnapshot.get(mPosition).getId();
                    Bundle bundle = new Bundle();
                    bundle.putString("TrasfusioneID", id);
-                   Navigation.findNavController(v).navigate(R.id.actionModificaTrasfusione, bundle);
+                   Navigation.findNavController(v).navigate(R.id.action_global_modificaTrasfusioneFragment, bundle);
                }
            });
         }

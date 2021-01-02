@@ -54,9 +54,6 @@
         <action
             android:id="@+id/action_trasfusioniFragment_to_cronologiaTrasfusioneFragment"
             app:destination="@id/cronologiaTrasfusioneFragment" />
-        <action
-            android:id="@+id/action_trasfusioniFragment_to_modificaTrasfusioneFragment"
-            app:destination="@id/modificaTrasfusioneFragment" />
     </fragment>
     <fragment
         android:id="@+id/esamiFragment"
@@ -101,11 +98,7 @@
         android:id="@+id/cronologiaTrasfusioneFragment"
         android:name="com.example.talapp.Trasfusioni.CronologiaTrasfusioneFragment"
         android:label="@string/cronologia_trasfusioni"
-        tools:layout="@layout/fragment_cronologia_trasfusioni" >
-        <action
-            android:id="@+id/actionModificaTrasfusione"
-            app:destination="@id/modificaTrasfusioneFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_cronologia_trasfusioni" />
     <fragment
         android:id="@+id/modificaTrasfusioneFragment"
         android:name="com.example.talapp.Trasfusioni.ModificaTrasfusioneFragment"
@@ -132,4 +125,5 @@
         android:name="com.example.talapp.Terapie.ModificaTerapieFragment"
         android:label="@string/modifica_terapie"
         tools:layout="@layout/fragment_modifica_terapie" />
+    <action android:id="@+id/action_global_modificaTrasfusioneFragment" app:destination="@id/modificaTrasfusioneFragment" />
 </navigation>

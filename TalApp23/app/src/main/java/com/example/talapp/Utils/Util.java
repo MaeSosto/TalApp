@@ -11,8 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 
 import com.example.talapp.Trasfusioni.TrasfusioniViewModel;
+import com.github.mikephil.charting.components.Description;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -78,7 +80,12 @@ public class Util {
     public static String DateToString(Date date){
         return SDFDate.format(date);
     }
-
+    public static String DateToOrario(Date date){
+        return date.getHours()+":"+ date.getMinutes();
+    }
+    public static String LongToString(Long l){
+        return DateToString(LongToDate(l));
+    }
     public static Calendar ConverterStringToCalendar(String giorno, String ora) throws ParseException {
         Log.i("Devo convertire", giorno + " alle "+ ora);
         Calendar cal = Calendar.getInstance();
@@ -87,6 +94,13 @@ public class Util {
         cal.setTime(date);
         Log.i("Devo convertire", String.valueOf(cal));
         return cal;
+    }
+
+    //SETTA LA DESCRIZIONE NULLA
+    public static Description getDescription(){
+        Description description = new Description();
+        description.setText("");
+        return description;
     }
 
 }
