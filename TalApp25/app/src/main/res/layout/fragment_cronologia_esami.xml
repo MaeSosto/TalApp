@@ -33,10 +33,10 @@
             android:padding="@dimen/LayoutMargin">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycler_view_cronologia_trasfusioni"
+                android:id="@+id/recycler_view_cronologia_esami"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:listitem="@layout/list_item_trasfusioni" />
+                tools:listitem="@layout/list_item_esami" />
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

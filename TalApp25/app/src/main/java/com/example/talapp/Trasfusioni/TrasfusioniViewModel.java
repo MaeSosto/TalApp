@@ -3,7 +3,6 @@ package com.example.talapp.Trasfusioni;
 import android.app.Application;
 import android.content.Context;
 import android.graphics.Color;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -40,26 +39,20 @@ import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.Timestamp;
-import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FieldValue;
-import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
-import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.google.protobuf.StringValue;
 
-import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.RecursiveTask;
 import java.util.concurrent.TimeUnit;
 
 import static android.content.ContentValues.TAG;
@@ -67,27 +60,16 @@ import static com.example.talapp.HomeActivity.trasfusioniRef;
 import static com.example.talapp.Utils.Util.DateToLong;
 import static com.example.talapp.Utils.Util.DateToOrario;
 import static com.example.talapp.Utils.Util.DateToString;
-import static com.example.talapp.Utils.Util.KEY_TRASFUSIONE;
 import static com.example.talapp.Utils.Util.KEY_TRASFUSIONE_DATA;
 import static com.example.talapp.Utils.Util.KEY_TRASFUSIONE_HB;
 import static com.example.talapp.Utils.Util.KEY_TRASFUSIONE_NOTE;
 import static com.example.talapp.Utils.Util.KEY_TRASFUSIONE_UNITA;
-import static com.example.talapp.Utils.Util.LongToDate;
-import static com.example.talapp.Utils.Util.LongToString;
-import static com.example.talapp.Utils.Util.db;
-import static com.example.talapp.Utils.Util.KEY_UTENTI;
-import static com.example.talapp.Utils.Util.Utente;
 
 import static com.example.talapp.Utils.Util.isConnectedToInternet;
-import static com.example.talapp.Utils.Util.trasfusioniViewModel;
 
 public class TrasfusioniViewModel extends AndroidViewModel {
     private static Context context;
     private static Date ultima, prossima; //Mi servono per prendere i valori della shcermata principale della trasfusione
-
-    public static Map<String, Object> getTrasfusione_old() {
-        return trasfusione_old;
-    }
 
     public static void setTrasfusione_old(Map<String, Object> trasfusione_old) {
         TrasfusioniViewModel.trasfusione_old = trasfusione_old;
@@ -228,7 +210,7 @@ public class TrasfusioniViewModel extends AndroidViewModel {
                         public void onComplete(@NonNull Task<Void> task) {
                             Navigation.findNavController(root).popBackStack();
                             SnackbarUndo SU = new SnackbarUndo();
-                            SU.trasfusioneRimossa(trasfusione_old, trasfusioniRef);
+                            SU.rimuovi(trasfusione_old, trasfusioniRef);
                             Snackbar snackbar = Snackbar.make(root, "Trasfusione rimossa", BaseTransientBottomBar.LENGTH_LONG);
                             snackbar.setAction("Cancella operazione", SU);
                             snackbar.show();
@@ -267,7 +249,7 @@ public class TrasfusioniViewModel extends AndroidViewModel {
                                     Calendar calendar = Calendar.getInstance();
                                     Timestamp data = (Timestamp) map.get(KEY_TRASFUSIONE_DATA);
                                     calendar.setTime( data.toDate());
-                                    events.add(new EventDay(calendar, R.drawable.ic_reportevent));
+                                    events.add(new EventDay(calendar, R.drawable.dot_trasfusioni));
                                     calendarView.setEvents(events);
                                 }
                             }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/MarginVertical"
-    android:backgroundTint="@color/TerraCotta"
+    android:backgroundTint="@color/Indipendence"
     card_view:cardCornerRadius="10dp">
 
     <LinearLayout
@@ -14,11 +14,11 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/TXVGiornoTrasfusione"
+            android:id="@+id/TXVGiornoEsame"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/MarginVertical"
-            android:text="Trasfusione del "
+            android:text="Esame del "
             android:textAlignment="center"
             android:textSize="@dimen/text_normal" />
 
@@ -30,29 +30,63 @@
 
             <LinearLayout
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/TXVUnitaTrasfusione"
+                    android:id="@+id/TXVTipoEsame"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="@dimen/MarginVertical"
-                    android:text="Unità: "
+                    android:text="Tipo: "
                     android:textSize="@dimen/text_normal" />
 
                 <TextView
-                    android:id="@+id/TXVHbTrasfusione"
+                    android:id="@+id/TXVEsitoEsame"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="@dimen/MarginVertical"
-                    android:text="Valore Hb: "
+                    android:text="Esito: "
                     android:textSize="@dimen/text_normal" />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textViewReferto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Referto: " />
+
+                    <TextView
+                        android:id="@+id/textViewDigiuno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Digiuno:" />
+
+                    <TextView
+                        android:id="@+id/textViewAttivazione"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Attivazione 24h:" />
+                </LinearLayout>
+
                 <TextView
-                    android:id="@+id/TXVNoteTrasfusione"
+                    android:id="@+id/TXVRicordaEsame"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/MarginVertical"
+                    android:text="Ricordati di: " />
+
+                <TextView
+                    android:id="@+id/TXVNoteEsame"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="@dimen/MarginVertical"
@@ -66,13 +100,13 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/buttonEditTrasfusione"
+                    android:id="@+id/buttonEditEsame"
+                    style="?android:attr/borderlessButtonStyle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:backgroundTint="@color/Indipendence"
                     android:drawableRight="@drawable/ic_baseline_create_24"
-                    android:backgroundTint="@color/TerraCotta"
-                    android:drawableTint="@color/white"
-                    style="?android:attr/borderlessButtonStyle"/>
+                    android:drawableTint="@color/white" />
 
             </LinearLayout>
 

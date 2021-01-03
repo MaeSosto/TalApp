@@ -10,6 +10,7 @@ import android.util.Patterns;
 import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 
+import com.example.talapp.Esami.EsamiViewModel;
 import com.example.talapp.Trasfusioni.TrasfusioniViewModel;
 import com.github.mikephil.charting.components.Description;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
@@ -40,15 +41,30 @@ public class Util {
     private static SimpleDateFormat SDF = new SimpleDateFormat("dd/MM/yyyy hh:mm");
     private static SimpleDateFormat SDFDate = new SimpleDateFormat("dd/MM/yy");
     public static FirebaseFirestore db;
+    public static final String KEY_UTENTI = "Users";
 
     //Valori delle trasfusioni
     public static TrasfusioniViewModel trasfusioniViewModel;
-    public static final String KEY_UTENTI = "Users";
     public static final String KEY_TRASFUSIONE = "Trasfusione";
     public final static String KEY_TRASFUSIONE_UNITA = "unita";
     public final static String KEY_TRASFUSIONE_DATA = "data";
     public final static String KEY_TRASFUSIONE_HB = "hb";
     public final static String KEY_TRASFUSIONE_NOTE = "note";
+
+    //Valori degli esami
+    public static EsamiViewModel esamiViewModel;
+    public static final String KEY_ESAME = "Esame";
+    public static final String KEY_ESAME_DATA = "data";
+    public static final String KEY_ESAME_ORA = "ORA";
+    public static final String KEY_ESAME_NOME = "NOME";
+    public static final String KEY_ESAME_PERIODICITA = "PERIODICITA";
+    public static final String KEY_ESAME_TIPO = "TIPO";
+    public static final String KEY_ESAME_DIGIUNO = "DIGIUNO";
+    public static final String KEY_ESAME_ATTIVAZIONE = "ATTIVAZIONE24H";
+    public static final String KEY_ESAME_RICORDA = "RICORDA";
+    public static final String KEY_ESAME_NOTE = "NOTE";
+    public static final String KEY_ESAME_ESITO = "ESITO";
+    public static final String KEY_ESAME_REFERTO = "REFERTO";
 
     public static boolean isConnectedToInternet(@NonNull Context _context) {
         ConnectivityManager cm = (ConnectivityManager)_context.getSystemService(Context.CONNECTIVITY_SERVICE);

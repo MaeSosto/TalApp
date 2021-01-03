@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/Eggshell"
     android:padding="@dimen/LayoutMargin"
-    tools:context=".Trasfusioni.ModificaTrasfusioneFragment">
+    android:background="@color/Eggshell"
+    tools:context=".Esami.ModificaEsamiFragment" >
 
     <LinearLayout
         android:id="@+id/linearLayout4"
@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/TXVDataTrasfusione"
+            android:id="@+id/TXVDataEsame"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/MarginVertical"
@@ -26,6 +26,23 @@
             android:gravity="center_vertical"
             android:textSize="@dimen/text_normal" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginVertical="@dimen/MarginVertical"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/aggiungi_referto"
+            android:textSize="@dimen/text_normal" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/aggiungi"
+            android:layout_marginVertical="@dimen/MarginVertical"
+            app:icon="@drawable/ic_baseline_attach_file_24"
+            android:textSize="@dimen/text_normal">
+        </Button>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,28 +51,27 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_marginVertical="@dimen/MarginVertical"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="@string/unita"
+                android:text="@string/esito"
                 android:textSize="@dimen/text_normal" />
 
-            <Spinner
-                android:id="@+id/spinnerUnitaTrasfusione"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
+            <EditText
+                android:id="@+id/editTextEsito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:entries="@array/unita"
-                android:gravity="center"
-                android:textAlignment="center" />/>
-
+                android:ems="10"
+                android:inputType="numberDecimal" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:orientation="horizontal">
 
             <TextView
@@ -64,16 +80,18 @@
                 android:layout_marginVertical="@dimen/MarginVertical"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:text="@string/hb_pre_trasfusionale"
+                android:text="@string/periodicit"
                 android:textSize="@dimen/text_normal" />
 
-            <EditText
-                android:id="@+id/editTextHbTrasfusione"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <Spinner
+                android:id="@+id/spinnerPeriodicitaEsame"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
                 android:layout_weight="1"
-                android:ems="10"
-                android:inputType="numberDecimal" />
+                android:entries="@array/periodicita"
+                android:gravity="center"
+                android:textAlignment="center" />/>
+
 
         </LinearLayout>
 
@@ -87,15 +105,16 @@
             android:textSize="@dimen/text_normal" />
 
         <EditText
-            android:id="@+id/ETNoteTrasfusione"
+            android:id="@+id/ETNoteModEsame"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:inputType="textLongMessage" />
+            android:layout_marginVertical="@dimen/MarginVertical"
+            android:inputType="textLongMessage"
+            android:textSize="@dimen/text_normal" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -103,7 +122,7 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
             <Button
-                android:id="@+id/buttonModificaTrasfusione"
+                android:id="@+id/buttonModifica"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/MarginVertical"
@@ -112,7 +131,7 @@
                 android:textSize="@dimen/text_normal" />
 
             <Button
-                android:id="@+id/buttonEliminaTrasfusione"
+                android:id="@+id/buttonElimina"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/MarginVertical"
@@ -123,5 +142,8 @@
         </LinearLayout>
 
     </LinearLayout>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,12 +9,11 @@
     tools:context=".Trasfusioni.AggiungiTrasfusioneFragment" >
 
     <LinearLayout
+        android:id="@+id/linearLayout5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,8 +40,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="date"
-                android:focusable="false"/>
+                android:focusable="false"
+                android:inputType="date" />
 
         </LinearLayout>
 
@@ -66,8 +65,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="time"
-                android:focusableInTouchMode="false"/>
+                android:focusableInTouchMode="false"
+                android:inputType="time" />
         </LinearLayout>
 
         <LinearLayout
@@ -118,7 +117,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginVertical="@dimen/MarginVertical"
-        android:layout_marginTop="8dp"
         android:layout_marginBottom="201dp"
 
         android:text="@string/salva"
@@ -126,6 +124,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

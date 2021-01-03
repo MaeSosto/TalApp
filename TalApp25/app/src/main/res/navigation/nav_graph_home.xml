@@ -63,9 +63,6 @@
         <action
             android:id="@+id/action_esamiFragment_to_cronologiaEsamiFragment"
             app:destination="@id/cronologiaEsamiFragment" />
-        <action
-            android:id="@+id/action_esamiFragment_to_modificaEsamiFragment"
-            app:destination="@id/modificaEsamiFragment" />
     </fragment>
     <fragment
         android:id="@+id/terapieFragment"
@@ -108,7 +105,7 @@
     <fragment
         android:id="@+id/cronologiaEsamiFragment"
         android:name="com.example.talapp.Esami.CronologiaEsamiFragment"
-        android:label="fragment_cronologia_esami"
+        android:label="@string/cronologia_esami"
         tools:layout="@layout/fragment_cronologia_esami" />
     <fragment
         android:id="@+id/modificaEsamiFragment"
@@ -125,5 +122,5 @@
         android:name="com.example.talapp.Terapie.ModificaTerapieFragment"
         android:label="@string/modifica_terapie"
         tools:layout="@layout/fragment_modifica_terapie" />
-    <action android:id="@+id/action_global_modificaTrasfusioneFragment" app:destination="@id/modificaTrasfusioneFragment" />
+    <action android:id="@+id/action_global_modificaTrasfusioneFragment" app:destination="@id/modificaTrasfusioneFragment" /><action android:id="@+id/action_global_modificaEsamiFragment" app:destination="@id/modificaEsamiFragment"/>
 </navigation>

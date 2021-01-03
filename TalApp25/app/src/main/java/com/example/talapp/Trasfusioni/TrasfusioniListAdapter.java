@@ -74,16 +74,16 @@ public class TrasfusioniListAdapter extends RecyclerView.Adapter<TrasfusioniList
 
         public TrasfusioniViewHolder(@NonNull View itemView) {
             super(itemView);
-            Edit = itemView.findViewById(R.id.buttonEditTrasfusione);
+            Edit = itemView.findViewById(R.id.buttonEditEsame);
         }
 
 
         public void setData(DocumentSnapshot documentSnapshot, int position) {
             Map<String, Object> trasfusione = documentSnapshot.getData();
-            TextView TXVgiorno = itemView.findViewById(R.id.TXVGiornoTrasfusione);
+            TextView TXVgiorno = itemView.findViewById(R.id.TXVGiornoEsame);
             Timestamp tmp = (Timestamp) trasfusione.get(KEY_TRASFUSIONE_DATA);
             TXVgiorno.setText("Trasfusione del "+ Util.DateToString(tmp.toDate()) + " ore "+ DateToOrario(tmp.toDate()));
-            TextView unita = itemView.findViewById(R.id.TXVUnitaTrasfusione);
+            TextView unita = itemView.findViewById(R.id.TXVTipoEsame);
             unita.setText("Unità: " + trasfusione.get(KEY_TRASFUSIONE_UNITA));
             TextView hb = itemView.findViewById(R.id.TXVHbTrasfusione);
             if(trasfusione.containsKey(KEY_TRASFUSIONE_HB)){
