@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">TalApp</string>
+
+    <string name="accedi">Accedi</string>
+    <string name="iscriviti">Iscriviti</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="password_dimenticata_label1">Non ricordi la password?</string>
+    <string name="registrati">Registrati</string>
+    <string name="hint_nome">Nome</string>
+    <string name="hint_ripeti_password">Ripeti password</string>
+    <string name="password_dimenticata">Password dimenticata</string>
+    <string name="password_dimenticata_label2">Ti manderemo una mail per reimpostare la password</string>
+    <string name="invia_mail">Invia mail</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="oppure">Oppure</string>
+    <string name="title_activity_impostazioni">ImpostazioniActivity</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="impostazioni_switch1">Notifica trasfusioni future</string>
+    <string name="impostazioni_label1">Alle ore</string>
+    <string name="impostazioni_switch2">Notifica esami strumentali futuri</string>
+    <string name="impostazioni_switch3">Notifica gli esami di laboratorio futuri</string>
+    <string name="disconnetti">Disconnetti</string>
+    <string name="impostazioni">Impostazioni</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="calendario">Calendario</string>
+    <string name="trasfusioni">Trasfusioni</string>
+    <string name="terapie">Terapie</string>
+    <string name="esami">Esami</string>
+    <string name="data">Data</string>
+    <string name="ora">Ora</string>
+    <string name="unita">Unità</string>
+    <string name="ulteriori_informazioni">Ulteriori informazioni</string>
+    <string name="salva">Salva</string>
+    <string name="periodicit">Periodicità</string>
+    <string name="tipo_di_esame">Tipo di esame</string>
+    <string name="digiuno">Digiuno</string>
+    <string name="attivazione_24h_prima">Attivazione 24h prima</string>
+    <string name="ricordami_di">Ricordami di</string>
+    <string name="nome_esame">Nome esame</string>
+    <string name="terapia_periodica">Terapia periodica</string>
+    <string name="data_inizio_terapia">Data inizio terapia</string>
+    <string name="data_fine_terapia">Data fine terapia</string>
+    <string name="nome_farmaco">Nome farmaco</string>
+    <string name="dose">Dose</string>
+    <string name="notifiche">Notifiche</string>
+    <string name="aggiungi_sveglia">Aggiungi sveglia</string>
+    <string name="prossima_trasfusione">Prossima trasfusione</string>
+    <string name="ultima_trasfusione">Ultima trasfusione</string>
+    <string name="aggiungi_dati_ultima_trasfusione">Aggiungi dati ultima trasfusione</string>
+    <string name="visualizza_cronologia">Visualizza cronologia</string>
+    <string name="hb_pre_trasfusionale">Hb pre trasfusionale (g/dL)</string>
+    <string name="elimina">Elimina</string>
+    <string name="modifica">Modifica</string>
+    <string name="esami_di_laboratorio">Esami di laboratorio</string>
+    <string name="esami_strumentali">Esami strumentali</string>
+    <string name="prossimi_esami">Prossimi esami</string>
+    <string name="aggiungi_referto">Aggiungi referto</string>
+    <string name="aggiungi">Aggiungi</string>
+    <string name="esito">Esito</string>
+    <string name="terapie_attuali">Terapie attuali</string>
+    <string name="aggiungi_trasfusione">Aggiungi trasfusione</string>
+    <string name="aggiungi_esame">Aggiungi esame</string>
+    <string name="aggiungi_terapie">Aggiungi terapie</string>
+    <string name="cronologia_trasfusioni">Cronologia trasfusioni</string>
+    <string name="modifica_trasfusione">Modifica trasfusione</string>
+    <string name="modifica_esami">Modifica esami</string>
+    <string name="cronologia_terapie">Cronologia terapie</string>
+    <string name="modifica_terapie">Modifica terapie</string>
+    <string name="eventi_del_giorno">Eventi del giorno</string>
+    <string name="notification_title">TalApp</string>
+    <string name="cronologia_esami">Cronologia Esami</string>
+    <string name="aggiungi_dati_ultimo_esame">Aggiungi dati ultimo esame</string>
+    <string name="notifica_la_prossima_trasfusione">Notifica la prossima trasfusione</string>
+    <string name="notifica_possibili_esami_non_programmati">Notifica possibili esami non programmati</string>
+
+</resources>

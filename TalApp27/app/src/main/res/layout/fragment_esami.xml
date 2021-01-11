@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Eggshell"
+    tools:context=".Esami.EsamiFragment">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/Eggshell"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/TabLaboratorio"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/esami_di_laboratorio" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/TabStrumentali"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/esami_strumentali" />
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/LayoutMargin">
+
+            <TextView
+                android:id="@+id/TXVProssimiEsami"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/prossimi_esami"
+                android:textSize="@dimen/text_normal" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RecyclerViewProssimiEsami"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                tools:listitem="@layout/list_item_esami">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <Button
+                android:id="@+id/buttonAggiungiUltimoEsame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:text="@string/aggiungi_dati_ultimo_esame"
+                app:icon="@drawable/ic_baseline_add_24"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/buttonCronologiaEsami"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:text="@string/visualizza_cronologia"
+                app:icon="@drawable/ic_baseline_history_24" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
