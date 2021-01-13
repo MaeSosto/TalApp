@@ -1,0 +1,22 @@
+<resources>
+    <string-array name="unita">
+        <item>Una</item>
+        <item>Due</item>
+        <item>Tre</item>
+        <item>Altra</item>
+    </string-array>
+
+    <string-array name="periodicita">
+        <item>Settimanale</item>
+        <item>Mensile</item>
+        <item>Trimestrale</item>
+        <item>Semestrale</item>
+        <item>Annuale</item>
+        <item>Altro</item>
+    </string-array>
+
+    <string-array name="TipoEsame">
+        <item>Strumentale</item>
+        <item>Di laboratorio</item>
+    </string-array>
+</resources>
