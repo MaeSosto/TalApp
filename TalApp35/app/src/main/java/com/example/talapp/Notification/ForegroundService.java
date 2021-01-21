@@ -1,17 +1,12 @@
 package com.example.talapp.Notification;
 
-import android.app.AlarmManager;
 import android.app.Service;
-import android.app.TaskStackBuilder;
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.IBinder;
 
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
-import androidx.core.app.NotificationManagerCompat;
 import androidx.core.content.ContextCompat;
 
 import android.app.Notification;
@@ -19,7 +14,6 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.os.Build;
-import android.util.Log;
 
 
 import com.example.talapp.LauncherActivity;
@@ -29,8 +23,6 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.firebase.auth.FirebaseAuth;
 
-import static com.example.talapp.Utils.Util.IMPOSTAZIONI_TRASFUSIONI;
-import static com.example.talapp.Utils.Util.NOTIFICATION_ID;
 import static com.example.talapp.Utils.Util.mAuth;
 import static com.example.talapp.Utils.Util.mFirebaseUser;
 import static com.example.talapp.Utils.Util.mGoogleSignInClient;
@@ -51,10 +43,6 @@ public class ForegroundService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-
-        //Setto il NotificationReceiver
-        IntentFilter filter = new IntentFilter(IMPOSTAZIONI_TRASFUSIONI);
-        registerReceiver(notificationReceiver, filter);
     }
 
     @Override
@@ -78,8 +66,6 @@ public class ForegroundService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        //Elimino il NotificationReceiver
-//        unregisterReceiver(notificationReceiver);
         notificationReceiver = null;
     }
 
@@ -98,17 +84,6 @@ public class ForegroundService extends Service {
             );
             NotificationManager manager = getSystemService(NotificationManager.class);
             manager.createNotificationChannel(serviceChannel);
-        }
-    }
-
-    public class NotificationReceiver extends BroadcastReceiver {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            Log.d("NOTIFICATION", "RICEVO");
-            Intent intent1 = new Intent(getApplicationContext(), com.example.talapp.Notification.NotificationManager.class);
-            intent1.setAction(intent.getAction());
-            intent1.putExtra("ID", intent.getStringExtra("ID"));
-            context.startService(intent1);
         }
     }
 

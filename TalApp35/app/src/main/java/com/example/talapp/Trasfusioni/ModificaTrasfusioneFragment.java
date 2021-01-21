@@ -66,7 +66,7 @@ public class ModificaTrasfusioneFragment extends Fragment {
         Spinner Sunita = root.findViewById(R.id.spinnerPeriodicitaEsame);
         EditText EThb = root.findViewById(R.id.editTextEsito);
         EditText ETNote = root.findViewById(R.id.ETNoteTrasfusione);
-        String id = getArguments().getString("TrasfusioneID");
+        String id = getArguments().getString("ID");
 
         //Prendo la trasfusione da modificare
         trasfusioniRef.document(id).get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {

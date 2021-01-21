@@ -77,12 +77,12 @@ public class Util {
 
     //Action per le notifiche
     public static final String CHANNEL_ID = "Notification Channel";
-    public static final int NOTIFICATION_ID = 0;
-    public final static int ID_TRASFUSIONI = 1;
-    public final static int ID_ESAME_STRUMENTALI = 2;
-    public final static int ID_ESAMI_STRUMENTALI_PERIODICI = 3;
-    public final static int ID_ESAME_LABORATORIO = 4;
-    public final static int ID_ESAMI_LABORATORIO_PERIODICI = 5;
+    public static final int ID_FOREGROUND = 1;
+    public final static int ID_TRASFUSIONI = 2;
+    public final static int ID_ESAME_STRUMENTALI = 3;
+    public final static int ID_ESAMI_STRUMENTALI_PERIODICI = 4;
+    public final static int ID_ESAME_LABORATORIO = 5;
+    public final static int ID_ESAMI_LABORATORIO_PERIODICI = 6;
 
     public static boolean isConnectedToInternet(@NonNull Context _context) {
         ConnectivityManager cm = (ConnectivityManager)_context.getSystemService(Context.CONNECTIVITY_SERVICE);

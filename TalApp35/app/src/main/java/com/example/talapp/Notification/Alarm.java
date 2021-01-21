@@ -54,17 +54,17 @@ public class Alarm extends Service {
         Calendar cal = Calendar.getInstance();
         cal.setTime(giorno);
         if(giorno.compareTo(date) <= 0 ) cal.add(Calendar.DATE, 1);
-        Intent intent = new Intent(context, ForegroundService.NotificationReceiver.class);
+        Intent intent = new Intent(context, NotificationReceiver.class);
         intent.setAction(action);
         intent.putExtra("ID", String.valueOf(id));
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, id, intent, PendingIntent.FLAG_UPDATE_CURRENT);
         Log.d("AlarmManager", Util.DateToString(cal.getTime())+ " alle "+ Util.DateToOrario(cal.getTime()));
-        alarmManager.cancel(pendingIntent);
-        alarmManager.setRepeating(android.app.AlarmManager.RTC_WAKEUP, cal.getTimeInMillis(), 2000, pendingIntent);
+        //alarmManager.cancel(pendingIntent);
+        alarmManager.setRepeating(android.app.AlarmManager.RTC_WAKEUP, Calendar.getInstance().getTimeInMillis(), 2000, pendingIntent);
     }
 
     public static void removeAlarm(int id, String action){
-        Intent intent = new Intent(context, ForegroundService.NotificationReceiver.class);
+        Intent intent = new Intent(context, NotificationReceiver.class);
         intent.setAction(action);
         intent.putExtra("ID", id);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, id, intent, PendingIntent.FLAG_UPDATE_CURRENT);
