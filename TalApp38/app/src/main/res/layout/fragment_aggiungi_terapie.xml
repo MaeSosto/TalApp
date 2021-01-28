@@ -28,26 +28,42 @@
                     android:layout_marginVertical="@dimen/MarginVertical"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
+                    android:text="@string/nome_farmaco"
+                    android:textSize="@dimen/text_normal" />
+
+                <EditText
+                    android:id="@+id/editTextNomeFarmaco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textAutoComplete|textAutoCorrect" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="@dimen/MarginVertical"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
                     android:text="@string/data_inizio_terapia"
                     android:textSize="@dimen/text_normal" />
 
                 <EditText
                     android:id="@+id/editTextDataInizioTerapia"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:ems="10"
+                    android:focusable="false"
                     android:inputType="date" />
             </LinearLayout>
-
-            <Switch
-                android:id="@+id/switchDigiunoEsame"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginVertical="@dimen/MarginVertical"
-                android:gravity="center_vertical"
-                android:text="@string/terapia_periodica"
-                android:textSize="@dimen/text_normal" />
 
             <LinearLayout
                 android:id="@+id/LLDataFineTerapia"
@@ -67,34 +83,11 @@
                 <EditText
                     android:id="@+id/editTextDataFineTerapia"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:ems="10"
+                    android:focusable="false"
                     android:inputType="date" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginVertical="@dimen/MarginVertical"
-                    android:layout_weight="1"
-                    android:gravity="center_vertical"
-                    android:text="@string/nome_farmaco"
-                    android:textSize="@dimen/text_normal" />
-
-                <EditText
-                    android:id="@+id/editTextNomeFarmaco"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="textAutoComplete|textAutoCorrect" />
-
             </LinearLayout>
 
             <LinearLayout
@@ -169,7 +162,7 @@
                 android:layout_height="match_parent">
 
                 <Button
-                    android:id="@+id/buttonSalvaEsame2"
+                    android:id="@+id/buttonSalvaTerapia"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginVertical="@dimen/MarginVertical"

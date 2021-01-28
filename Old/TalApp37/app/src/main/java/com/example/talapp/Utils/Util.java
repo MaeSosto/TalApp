@@ -46,7 +46,6 @@ public class Util {
 
     //Valori colonne
     public final static String KEY_DATA = "DATA";
-    public final static String KEY_DATA_FINE = "DATA FINE";
     public static final String KEY_NOTE = "NOTE";
     public static final String KEY_TRASFUSIONE = "TRASFUSIONE";
     public final static String KEY_UNITA = "UNITA";
@@ -60,10 +59,10 @@ public class Util {
     public static final String KEY_RICORDA = "RICORDA";
     public static final String KEY_ESITO = "ESITO";
     public static final String KEY_REFERTO = "REFERTO";
-    public static final String KEY_DOSE = "DOSE";
     public static final String ESAMI_STRUMENTALI = "Strumentale";
     public static final String ESAMI_LABORATORIO = "Di laboratorio";
     public static final String KEY_SVEGLIE = "SVEGLIE";
+    public static final String ID_SVEGLIA = "ID SVEGLIA";
     public final static String IMPOSTAZIONI_TRASFUSIONI = "TRASFUSIONE";
     public final static String IMPOSTAZIONI_TRASFUSIONI_ORARIO = "TRASFUSIONE ORARIO";
     public final static String IMPOSTAZIONI_ESAMI = "ESAMI";
