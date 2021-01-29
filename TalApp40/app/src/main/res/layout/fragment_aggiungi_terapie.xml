@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Terapie.AggiungiTerapieFragment"
+    android:background="@color/Eggshell">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/LayoutMargin"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="@dimen/MarginVertical"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/nome_farmaco"
+                    android:textSize="@dimen/text_normal" />
+
+                <EditText
+                    android:id="@+id/editTextNomeFarmaco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textAutoComplete|textAutoCorrect" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="@dimen/MarginVertical"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/data_inizio_terapia"
+                    android:textSize="@dimen/text_normal" />
+
+                <EditText
+                    android:id="@+id/editTextDataInizioTerapia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:inputType="date" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LLDataFineTerapia"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="@dimen/MarginVertical"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/data_fine_terapia"
+                    android:textSize="@dimen/text_normal" />
+
+                <EditText
+                    android:id="@+id/editTextDataFineTerapia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:inputType="date" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginVertical="@dimen/MarginVertical"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/dose"
+                    android:textSize="@dimen/text_normal" />
+
+                <EditText
+                    android:id="@+id/editTextDoseFarmaco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="text" />
+
+            </LinearLayout>
+            <Switch
+                android:id="@+id/switchNotificheFarmaco"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:gravity="center_vertical"
+                android:text="@string/notifiche"
+                android:textSize="@dimen/text_normal" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/floatingActionButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:src="@drawable/ic_baseline_alarm_add_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/ulteriori_informazioni"
+                android:textSize="@dimen/text_normal" />
+
+            <EditText
+                android:id="@+id/editTextNoteTerapia"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textLongMessage" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/buttonSalvaTerapia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/MarginVertical"
+
+                    android:text="@string/salva"
+                    android:textSize="@dimen/text_normal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
