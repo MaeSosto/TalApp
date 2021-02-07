@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_home"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.talapp.Home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_calendarioFragment"
+            app:destination="@id/calendarioFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_trasfusioniFragment"
+            app:destination="@id/trasfusioniFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_esamiFragment"
+            app:destination="@id/esamiFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_terapieFragment"
+            app:destination="@id/terapieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calendarioFragment"
+        android:name="com.example.talapp.Home.CalendarioFragment"
+        android:label="@string/calendario"
+        tools:layout="@layout/fragment_calendario" >
+        <action
+            android:id="@+id/action_calendarioFragment_to_aggiungiTrasfusioneFragment"
+            app:destination="@id/aggiungiTrasfusioneFragment" />
+        <action
+            android:id="@+id/action_calendarioFragment_to_aggiungiEsamiFragment"
+            app:destination="@id/aggiungiEsamiFragment" />
+        <action
+            android:id="@+id/action_calendarioFragment_to_aggiungiTerapieFragment"
+            app:destination="@id/aggiungiTerapieFragment" />
+        <action
+            android:id="@+id/actionGiorno"
+            app:destination="@id/giornoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/giornoFragment"
+        android:name="com.example.talapp.Home.GiornoFragment"
+        android:label="@string/eventi_del_giorno"
+        tools:layout="@layout/fragment_giorno">
+    </fragment>
+    <fragment
+        android:id="@+id/trasfusioniFragment"
+        android:name="com.example.talapp.Trasfusioni.TrasfusioniFragment"
+        android:label="@string/trasfusioni"
+        tools:layout="@layout/fragment_trasfusioni" >
+        <action
+            android:id="@+id/action_trasfusioniFragment_to_cronologiaTrasfusioneFragment"
+            app:destination="@id/cronologiaTrasfusioneFragment" />
+        <action
+            android:id="@+id/action_trasfusioniFragment_to_aggiungiTrasfusioneFragment"
+            app:destination="@id/aggiungiTrasfusioneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/esamiFragment"
+        android:name="com.example.talapp.Esami.EsamiFragment"
+        android:label="@string/esami"
+        tools:layout="@layout/fragment_esami" >
+        <action
+            android:id="@+id/action_esamiFragment_to_cronologiaEsamiFragment"
+            app:destination="@id/cronologiaEsamiFragment" />
+        <action
+            android:id="@+id/action_esamiFragment_to_aggiungiEsamiFragment"
+            app:destination="@id/aggiungiEsamiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/terapieFragment"
+        android:name="com.example.talapp.Terapie.TerapieFragment"
+        android:label="@string/terapie"
+        tools:layout="@layout/fragment_terapie" >
+        <action
+            android:id="@+id/action_terapieFragment_to_cronologiaTerapieFragment"
+            app:destination="@id/cronologiaTerapieFragment" />
+        <action
+            android:id="@+id/action_terapieFragment_to_aggiungiTerapieFragment"
+            app:destination="@id/aggiungiTerapieFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aggiungiTrasfusioneFragment"
+        android:name="com.example.talapp.Trasfusioni.AggiungiTrasfusioneFragment"
+        android:label="@string/aggiungi_trasfusione"
+        tools:layout="@layout/fragment_aggiungi_trasfusione" />
+    <fragment
+        android:id="@+id/aggiungiEsamiFragment"
+        android:name="com.example.talapp.Esami.AggiungiEsamiFragment"
+        android:label="@string/aggiungi_esame"
+        tools:layout="@layout/fragment_aggiungi_esami" />
+    <fragment
+        android:id="@+id/aggiungiTerapieFragment"
+        android:name="com.example.talapp.Terapie.AggiungiTerapieFragment"
+        android:label="@string/aggiungi_terapia"
+        tools:layout="@layout/fragment_aggiungi_terapie" >
+        <action
+            android:id="@+id/action_aggiungiTerapieFragment_to_svegliaFragment"
+            app:destination="@id/svegliaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cronologiaTrasfusioneFragment"
+        android:name="com.example.talapp.Trasfusioni.CronologiaTrasfusioneFragment"
+        android:label="@string/cronologia_trasfusioni"
+        tools:layout="@layout/fragment_cronologia_trasfusioni" />
+    <fragment
+        android:id="@+id/modificaTrasfusioneFragment"
+        android:name="com.example.talapp.Trasfusioni.ModificaTrasfusioneFragment"
+        android:label="@string/modifica_trasfusione"
+        tools:layout="@layout/fragment_modifica_trasfusione" >
+    </fragment>
+    <fragment
+        android:id="@+id/cronologiaEsamiFragment"
+        android:name="com.example.talapp.Esami.CronologiaEsamiFragment"
+        android:label="@string/cronologia_esami"
+        tools:layout="@layout/fragment_cronologia_esami" />
+    <fragment
+        android:id="@+id/modificaEsamiFragment"
+        android:name="com.example.talapp.Esami.ModificaEsamiFragment"
+        android:label="@string/modifica_esami"
+        tools:layout="@layout/fragment_modifica_esami" />
+    <fragment
+        android:id="@+id/cronologiaTerapieFragment"
+        android:name="com.example.talapp.Terapie.CronologiaTerapieFragment"
+        android:label="@string/cronologia_terapie"
+        tools:layout="@layout/fragment_cronologia_terapie" />
+    <fragment
+        android:id="@+id/modificaTerapieFragment"
+        android:name="com.example.talapp.Terapie.ModificaTerapieFragment"
+        android:label="@string/modifica_terapie"
+        tools:layout="@layout/fragment_modifica_terapie" />
+    <action android:id="@+id/action_global_modificaTrasfusioneFragment" app:destination="@id/modificaTrasfusioneFragment" />
+    <action android:id="@+id/action_global_modificaEsamiFragment" app:destination="@id/modificaEsamiFragment"/>
+    <action android:id="@+id/action_global_modificaTerapiaFragment" app:destination="@id/modificaTerapieFragment"/>
+    <fragment
+        android:id="@+id/svegliaFragment"
+        android:name="com.example.talapp.Sveglie.SvegliaFragment"
+        android:label="Aggiungi Sveglia"
+        tools:layout="@layout/fragment_sveglia" />
+</navigation>
