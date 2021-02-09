@@ -1,0 +1,110 @@
+<resources>
+    <string-array name="unita">
+        <item>Una</item>
+        <item>Due</item>
+        <item>Tre</item>
+        <item>Altra</item>
+    </string-array>
+
+    <string-array name="periodicita">
+        <item>Settimanale</item>
+        <item>Mensile</item>
+        <item>Trimestrale</item>
+        <item>Semestrale</item>
+        <item>Annuale</item>
+        <item>Altro</item>
+    </string-array>
+
+    <string-array name="TipoEsame">
+        <item>Strumentale</item>
+        <item>Di laboratorio</item>
+    </string-array>
+
+    <string-array name="NomiEsami">
+        <item>Emocromo</item>
+        <item>Ves</item>
+        <item>Proteina c reattiva</item>
+        <item>Azotemia</item>
+        <item>Glicemia</item>
+        <item>Gruppo sanguigno e fattore rh</item>
+        <item>Alt (gpt)</item>
+        <item>Ast (got)</item>
+        <item>Gamma gt</item>
+        <item>Creatininemia</item>
+        <item>Colesterolemia</item>
+        <item>Hdl</item>
+        <item>Ldl</item>
+        <item>Trigliceridi</item>
+        <item>Acido urico</item>
+        <item>Bilirubina totale e frazionata</item>
+        <item>Protidogramma</item>
+        <item>Emoglobina glicosilata (hba1c)</item>
+        <item>Beta hcgBeta hc</item>
+        <item>Tsh</item>
+        <item>Ft3</item>
+        <item>Ft4</item>
+        <item>Antitrombina iii</item>
+        <item>Anticorpi anti tireoglobuline</item>
+        <item>Anticorpi anti perossidasi tiroidea</item>
+        <item>Insulina</item>
+        <item>Psa totale e libero</item>
+        <item>Sideremia</item>
+        <item>Ferritina</item>
+        <item>Transferrina</item>
+        <item>Intolleranze alimentari</item>
+        <item>Ormone antimulleriano</item>
+        <item>Fsh</item>
+        <item>Lh</item>
+        <item>17-β-estradiolo</item>
+        <item>Prolattina</item>
+        <item>Progesterone</item>
+        <item>17-idrossiprogesterone</item>
+        <item>Testosterone</item>
+        <item>Androstenedione</item>
+        <item>Dhea</item>
+        <item>Dhea-s</item>
+        <item>Tempo di tromboplastina</item>
+        <item>Tempo di protrombina</item>
+        <item>Proteina c</item>
+        <item>Proteina s</item>
+        <item>Coagulazione</item>
+        <item>Marker epatite b (hbv)</item>
+        <item>Marker epatite c (hcv)</item>
+        <item>Marker epatite a (hav)</item>
+        <item>Hiv</item>
+        <item>Vdrl</item>
+        <item>Cytomegalovirus (cmv)</item>
+        <item>Toxoplasma</item>
+        <item>Rosolia</item>
+        <item>Herpes i e ii</item>
+        <item>Autoimmunità</item>
+        <item>Vitamine</item>
+        <item>Markers tumorali</item>
+        <item>He 4 + ca125 con r.o.m.a.</item>
+        <item>Fostasi alcalina</item>
+        <item>Cpk</item>
+        <item>Ldh</item>
+        <item>Amilasi</item>
+        <item>Lipasi</item>
+        <item>Titolo anti streptolisinico</item>
+        <item>Streptozyme</item>
+        <item>Sodio</item>
+        <item>Calcio</item>
+        <item>Potassio</item>
+        <item>Cloro</item>
+        <item>Magnesio</item>
+        <item>Fosfati</item>
+        <item>Test di coombs diretto e indiretto</item>
+        <item>Ige totali</item>
+        <item>Rast (allergeni specifici)</item>
+        <item>G6pdh</item>
+        <item>Elettroforesi emoglobina</item>
+        <item>Radicali liberi (droms test, bap test)</item>
+        <item>Rapporto omega 3/6</item>
+        <item>Anticorpi anti endomisio</item>
+        <item>Anticorpi antri gliadina</item>
+        <item>Anticorpi anti transglutaminasi</item>
+        <item>Acido folico</item>
+        <item>Omocisteina</item>
+    </string-array>
+</resources>
