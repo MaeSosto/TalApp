@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/LayoutMargin"
+    tools:context=".Trasfusioni.ModificaTrasfusioneFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/TXVDataTrasfusione"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                app:startIconContentDescription="@string/hb_pre_trasfusionale"
+                android:hint="@string/hb_pre_trasfusionale"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextHb"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberDecimal"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:hint="@string/unita"
+                app:startIconContentDescription="@string/unita">
+
+                <AutoCompleteTextView
+                    android:id="@+id/spinnerUnita"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/unita"
+                    android:inputType="none"
+                    android:text="Una" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:hint="@string/ulteriori_informazioni"
+                app:startIconContentDescription="@string/ulteriori_informazioni">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/ETNoteTrasfusione"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textLongMessage" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/buttonModificaTerapia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/MarginVertical"
+                    android:layout_weight="1"
+                    android:text="@string/modifica"
+                    android:textSize="@dimen/text_normal" />
+
+                <Button
+                    android:id="@+id/buttonEliminaTerapia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/MarginVertical"
+                    android:layout_weight="1"
+                    android:text="@string/elimina"
+                    android:textSize="@dimen/text_normal" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
