@@ -1,0 +1,7 @@
+Test di usabilità:
+
+- Registrati come nuovo utente, aggiungi un evento, esegui nuovamente il login su un altro dispositivo. Verifica che l'evento sia presente in entrambi i dispositivi.
+- Crea una terapia con un periodo a piacimento e inserisci due sveglie, la prima dovrà suonare tutti i giorni alle 10.30 e la seconda solo il giovedì e domenica alle 21.00, attiva le notifiche. Verifica la ricezione delle notifiche delle sveglie riferite alla terapia in assenza di internet.
+- Crea un nuovo evento di tipo trasfusione che ha come data di riferimento domani alle 11.15, indica che si necessitano due sacche di unità e inserisci nelle note il luogo dell'evento (es. Via Indipendenza 3)
+- Crea un nuovo evento di tipo esame, indica un nome tra quelli proposti, una data a piacimento non troppo lontana e un orario, indica che sarà necessario digiunare e che hai bisogno di un preavviso di 24h per ricordarti di raccogliere le urine. Attiva nelle impostazioni le sveglie relative a questo tipo di esame e verifica la ricezione delle notifiche.
+- Visualizza la scheda contenente le informazioni dell'esame precedente, aggiungi 3 allegati ed in seguito eliminane uno.
