@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.MartinaSosto.talapp">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TalApp">
+        <activity android:name="com.MartinaSosto.talapp.Allegati.MostraAllegato">
+        </activity>
+        <activity
+            android:name="com.MartinaSosto.talapp.Impostazioni.ImpostazioniActivity"
+            android:parentActivityName="com.MartinaSosto.talapp.HomeActivity"
+            android:label="Impostazioni"/>
+        <activity android:name="com.MartinaSosto.talapp.LauncherActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.MartinaSosto.talapp.HomeActivity"
+            android:label="@string/home" />
+
+        <service
+            android:name="com.MartinaSosto.talapp.Notification.ForegroundService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.MartinaSosto.talapp.Notification.ForegroundService" />
+            </intent-filter>
+        </service>
+        <service android:name="com.MartinaSosto.talapp.Notification.NotificationAlarm" />
+        <service
+            android:name="com.MartinaSosto.talapp.Notification.JobService"
+            android:exported="true"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service android:name="com.MartinaSosto.talapp.Sveglie.ClockAlarm" />
+
+        <receiver
+            android:name="com.MartinaSosto.talapp.Notification.BootReceiver"
+            android:enabled="true"
+            android:permission="android.permission.RECEIVE_BOOT_COMPLETED">
+            <intent-filter>
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.MartinaSosto.talapp.Notification.NotificationReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="IMPOSTAZIONI_TRASFUSIONI" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

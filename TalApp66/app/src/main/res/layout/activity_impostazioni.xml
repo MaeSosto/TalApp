@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Impostazioni.ImpostazioniActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/LayoutMargin">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:text="@string/trasfusioni"
+                android:textSize="@dimen/text_subtitle"></com.google.android.material.textview.MaterialTextView>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchTrasfusione"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:layout_weight="1"
+                android:text="@string/notifica_la_prossima_trasfusione"
+                android:textSize="@dimen/text_normal" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/LLSwitchTrasfusione"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:hint="@string/imposta_orario"
+                android:visibility="gone"
+                app:startIconContentDescription="@string/imposta_orario"
+                app:startIconDrawable="@drawable/ic_baseline_access_time_24"
+                tools:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextSettingsTrasfusioni"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="false"
+                    android:inputType="time" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View style="@style/Divider"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:text="@string/esami"
+                android:textSize="@dimen/text_subtitle"></com.google.android.material.textview.MaterialTextView>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchEsameStrumentale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:layout_weight="1"
+                android:text="@string/notifiche_esami_futuri_programmati"
+                android:textSize="@dimen/text_normal" />
+
+
+            <LinearLayout
+                android:id="@+id/LLEsamiFuturi"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/MarginVertical"
+                    android:hint="@string/imposta_orario"
+                    app:startIconContentDescription="@string/imposta_orario"
+                    app:startIconDrawable="@drawable/ic_baseline_access_time_24">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/editTextEsameStrumentale"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="false"
+                        android:inputType="time" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchEsamiDigiuno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/MarginVertical"
+                    android:layout_weight="1"
+                    android:text="@string/notifica_digiuni"
+                    android:textSize="@dimen/text_normal" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchEsami24h"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/MarginVertical"
+                    android:layout_weight="1"
+                    android:text="Notifica attivazione anticipata di 24h"
+                    android:textSize="@dimen/text_normal" />
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/view"
+                style="@style/Divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchEsameStrumentalePeriodici"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:layout_weight="1"
+                android:text="@string/notifica_possibili_esami_non_programmati"
+                android:textSize="@dimen/text_normal" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/LLEsamiNonProgrammati"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:hint="@string/imposta_orario"
+                android:visibility="gone"
+                app:startIconContentDescription="@string/imposta_orario"
+                app:startIconDrawable="@drawable/ic_baseline_access_time_24"
+                tools:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editTextEsamePeriodici"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="false"
+                    android:inputType="time" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonSalvaImpostazioni"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/MarginVertical"
+                    android:text="Salva"
+                    android:textAlignment="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View style="@style/Divider"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/impostazioni_label2">
+
+            </com.google.android.material.textview.MaterialTextView>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/TXVUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonDisconnetti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/MarginVertical"
+                android:layout_weight="1"
+                android:text="@string/disconnetti" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

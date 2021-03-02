@@ -1,0 +1,109 @@
+{
+  "project_info": {
+    "project_number": "144265261241",
+    "firebase_url": "https://talapp-24958-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "talapp-24958",
+    "storage_bucket": "talapp-24958.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144265261241:android:7e57291f2119e7b2282b68",
+        "android_client_info": {
+          "package_name": "com.MartinaSosto.talapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144265261241-en5c09kaln9vufpibebotvjbgum5u2kv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.MartinaSosto.talapp",
+            "certificate_hash": "e804e7775ab730dfed50ef2f036eaa7fce039fc2"
+          }
+        },
+        {
+          "client_id": "144265261241-vr9b7pvughdukhdbcubn5ru9c3heu0oe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQUY9AHHOVOg4nZhkA54aAat2C6_DbDHY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144265261241-vr9b7pvughdukhdbcubn5ru9c3heu0oe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144265261241:android:5bc8a26003781de6282b68",
+        "android_client_info": {
+          "package_name": "com.example.talapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144265261241-1r2pk9q8dmut0m3lposfi53ribf6g6m3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.talapp",
+            "certificate_hash": "2b58c307dd631044f40932a4323817bed6a4b0ae"
+          }
+        },
+        {
+          "client_id": "144265261241-dgbfvlc2kl566qo2t3clsbi61iovkb4n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.talapp",
+            "certificate_hash": "ab760af0abd9e4ece57e78732b49824aee1e15de"
+          }
+        },
+        {
+          "client_id": "144265261241-i6cbf7o31dgcuvcbpppq9erlakdb1isr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.talapp",
+            "certificate_hash": "3c36e484380ebe2b33a6ee79e0025a2217177e50"
+          }
+        },
+        {
+          "client_id": "144265261241-uad2ksgs36fvob7rv0302qkd9v8d65ks.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.talapp",
+            "certificate_hash": "e804e7775ab730dfed50ef2f036eaa7fce039fc2"
+          }
+        },
+        {
+          "client_id": "144265261241-vr9b7pvughdukhdbcubn5ru9c3heu0oe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQUY9AHHOVOg4nZhkA54aAat2C6_DbDHY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144265261241-vr9b7pvughdukhdbcubn5ru9c3heu0oe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
